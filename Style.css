@@ -1,0 +1,89 @@
+body{
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 1px;
+    padding: 20px;
+}
+
+/* Main Heading */
+h1{
+    background-color: #0077cc;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+/* Section Headings */
+h2{
+    color: #3d2fdfe2;
+    margin-top: 30px;
+}
+
+/* Paragraph */
+p{
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+/* Skills List */
+ul{
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+li{
+    margin: 10px 0;
+}
+
+/* Table */
+table{
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+}
+
+th{
+    background: #0077cc;
+    color: white;
+    padding: 12px;
+}
+
+td{
+    padding: 12px;
+    text-align: center;
+}
+
+/* Form */
+form{
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+/* Input Fields */
+input,
+textarea{
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+/* Button */
+button{
+    background: #0077cc;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+/* Button Hover */
+button:hover{
+    background: #005fa3;
+}

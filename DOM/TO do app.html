@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>To-Do App</title>
+
+    <style>
+        body{
+            font-family: Arial;
+            background:#f4f4f4;
+            text-align:center;
+            margin-top:50px;
+        }
+
+        .container{
+            width:300px;
+            margin:auto;
+            background:white;
+            padding:20px;
+            border-radius:10px;
+            box-shadow:0 0 10px gray;
+        }
+
+        input{
+            width:70%;
+            padding:10px;
+        }
+
+        button{
+            padding:10px;
+            cursor:pointer;
+        }
+
+        ul{
+            list-style:none;
+            padding:0;
+        }
+
+        li{
+            background:#eee;
+            margin-top:10px;
+            padding:10px;
+            display:flex;
+            justify-content:space-between;
+            align-items:center;
+            border-radius:5px;
+        }
+
+        .completed{
+            text-decoration: line-through;
+            color:gray;
+        }
+
+        .delete-btn{
+            background:red;
+            color:white;
+            border:none;
+            padding:5px 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <h2>To-Do App</h2>
+
+        <input type="text" id="taskInput" placeholder="Enter task">
+        <button onclick="addTask()">Add</button>
+
+        <ul id="taskList"></ul>
+    </div>
+
+    <script>
+
+        function addTask(){
+
+            let taskInput = document.getElementById("taskInput");
+            let taskText = taskInput.value;
+
+            if(taskText === ""){
+                alert("Please enter a task");
+                return;
+            }
+
+            // Create li
+            let li = document.createElement("li");
+
+            // Create span
+            let span = document.createElement("span");
+            span.innerText = taskText;
+
+            // Mark completed
+            span.onclick = function(){
+                span.classList.toggle("completed");
+            }
+
+            // Delete button
+            let deleteBtn = document.createElement("button");
+            deleteBtn.innerText = "Delete";
+            deleteBtn.className = "delete-btn";
+
+            deleteBtn.onclick = function(){
+                li.remove();
+            }
+
+            // Add span and button to li
+            li.appendChild(span);
+            li.appendChild(deleteBtn);
+
+            // Add li to ul
+            document.getElementById("taskList").appendChild(li);
+
+            // Clear input
+            taskInput.value = "";
+        }
+
+    </script>
+
+</body>
+</html>
